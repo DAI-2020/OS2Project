@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cppapp-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cppapp
+  template:
+    metadata:
+      labels:
+        app: cppapp
+    spec:
+      containers:
+        - name: cppapp-container
+          image: daii2020/cppapp:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

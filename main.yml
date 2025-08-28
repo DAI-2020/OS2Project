@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches: 
-     -main  # هيشتغل كل مرة تعملي push على فرع main
+     - main  # هيشتغل كل مرة تعملي push على فرع main
 
 jobs:
   build:

@@ -1,7 +1,12 @@
-#include<iostream>
+#include <iostream>
+#include <chrono>
+#include <thread>
 using namespace std;
-int main()
-{
-   cout<<"simple task for Docker & minikube";
-   return 0;
+
+int main() {
+    while(true) {
+        cout << "Hello from C++ app running in Kubernetes!" << endl;
+        this_thread::sleep_for(chrono::seconds(5));
+    }
+    return 0;
 }
